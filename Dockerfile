@@ -30,6 +30,5 @@ RUN chmod +x /etc/tor/config.sh
 
 RUN mkdir /home/tor
 VOLUME /home/tor/.tor
-#RUN chown -R tor /home/tor
 
 CMD /etc/tor/config.sh
