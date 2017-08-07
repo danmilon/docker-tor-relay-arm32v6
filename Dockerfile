@@ -1,7 +1,7 @@
 FROM arm32v6/alpine:3.6
 LABEL maintainer="Dan Milon <i@danmilon.me>"
 
-# Based on https://github.com/jfrazelle/dockerfiles/tree/master/tor-relay
+# Based on https://github.com/TheZ3ro/docker-tor-relay
 
 # Note: Tor is only in testing repo -> http://pkgs.alpinelinux.org/packages?package=emacs&repo=all&arch=x86_64
 RUN apk update && apk add \
