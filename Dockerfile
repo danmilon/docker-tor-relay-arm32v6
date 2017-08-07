@@ -1,5 +1,5 @@
 FROM arm32v6/alpine:3.6
-MAINTAINER TheZero <io@thezero.org>
+LABEL maintainer="Dan Milon <i@danmilon.me>"
 
 # Based on https://github.com/jfrazelle/dockerfiles/tree/master/tor-relay
 
