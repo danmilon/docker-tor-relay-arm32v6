@@ -3,12 +3,11 @@ LABEL maintainer="Dan Milon <i@danmilon.me>"
 
 # Based on https://github.com/TheZ3ro/docker-tor-relay
 
-# Note: Tor is only in community repo -> http://pkgs.alpinelinux.org/packages?package=emacs&repo=all&arch=x86_64
-RUN apk update && apk add \
-	bash \
-	tor \
-	--update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community/ \
-	&& rm -rf /var/cache/apk/*
+RUN apk add \
+    --repository http://dl-cdn.alpinelinux.org/alpine/latest-stable/community \
+    --no-cache \
+    bash \
+    tor
 
 # default port to used for incoming Tor connections
 # can be changed by changing 'ORPort' in torrc
