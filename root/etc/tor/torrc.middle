@@ -12,8 +12,9 @@
 ## Tor will look for this file in various places based on your platform:
 ## https://www.torproject.org/docs/faq#torrc
 
-DataDirectory /home/tor/.tor
+DataDirectory /var/lib/tor
 ORPort 9001
-Nickname ${NICKNAME}
-ContactInfo ${CONTACT_GPG_FINGERPRINT} ${CONTACT_NAME} ${CONTACT_EMAIL}
-ExitPolicy reject *:* # no exits allowed
+SocksPort 0
+Nickname ${TOR_NICKNAME}
+ContactInfo ${TOR_CONTACT_INFO}
+ExitPolicy reject *:*
