@@ -13,6 +13,10 @@ RUN apk add \
     gettext \
     tor
 
+# restrict permissions otherwise you get this in the logs
+# [warn] Fixing permissions on directory /var/lib/tor
+RUN chmod 700 /var/lib/tor
+
 # default port to used for incoming Tor connections
 # can be changed by changing 'ORPort' in torrc
 EXPOSE 9001/tcp
