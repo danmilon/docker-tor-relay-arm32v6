@@ -11,7 +11,7 @@ RUN apk add \
 
 # default port to used for incoming Tor connections
 # can be changed by changing 'ORPort' in torrc
-EXPOSE 9001
+EXPOSE 9001/tcp
 
 # copy in our torrc files
 COPY torrc.bridge /etc/tor/torrc.bridge
