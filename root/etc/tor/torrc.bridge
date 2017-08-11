@@ -13,6 +13,7 @@
 ## https://www.torproject.org/docs/faq#torrc
 
 DataDirectory /var/lib/tor
+BandwidthRate ${TOR_BANDWIDTH_RATE}
 ORPort 9001
 SocksPort 0
 Nickname ${TOR_NICKNAME}

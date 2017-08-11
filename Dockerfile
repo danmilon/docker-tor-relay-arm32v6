@@ -6,6 +6,7 @@ LABEL maintainer="Dan Milon <i@danmilon.me>"
 ENV TORRC=/etc/tor/torrc.middle
 ENV TOR_NICKNAME=my-node
 ENV TOR_CONTACT_INFO=Anonymous
+ENV TOR_BANDWIDTH_RATE="1 GByte"
 
 RUN apk add \
     --repository http://dl-cdn.alpinelinux.org/alpine/latest-stable/community \
