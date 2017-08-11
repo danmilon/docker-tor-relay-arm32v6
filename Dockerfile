@@ -3,10 +3,10 @@ LABEL maintainer="Dan Milon <i@danmilon.me>"
 
 # Based on https://github.com/TheZ3ro/docker-tor-relay
 
-ENV TORRC=/etc/tor/torrc.middle
-ENV TOR_NICKNAME=my-node
-ENV TOR_CONTACT_INFO=Anonymous
-ENV TOR_BANDWIDTH_RATE="1 GByte"
+ENV TORRC=/etc/tor/torrc.middle \
+    TOR_NICKNAME=my-node \
+    TOR_CONTACT_INFO=Anonymous \
+    TOR_BANDWIDTH_RATE="1 GByte"
 
 RUN apk add \
     --repository http://dl-cdn.alpinelinux.org/alpine/latest-stable/community \
