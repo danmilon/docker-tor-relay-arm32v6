@@ -10,7 +10,7 @@ ENV TORRC=/etc/tor/torrc.middle \
 
 RUN \
  apk add \
-    --repository http://dl-cdn.alpinelinux.org/alpine/latest-stable/community \
+    --repository http://dl-cdn.alpinelinux.org/alpine/v3.6/community \
     --no-cache \
     gettext \
     tor && \
