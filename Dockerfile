@@ -8,15 +8,16 @@ ENV TORRC=/etc/tor/torrc.middle \
     TOR_CONTACT_INFO=Anonymous \
     TOR_BANDWIDTH_RATE="1 GByte"
 
-RUN apk add \
+RUN \
+ apk add \
     --repository http://dl-cdn.alpinelinux.org/alpine/latest-stable/community \
     --no-cache \
     gettext \
-    tor
+    tor && \
 
-# restrict permissions otherwise you get this in the logs
-# [warn] Fixing permissions on directory /var/lib/tor
-RUN chmod 700 /var/lib/tor
+ # restrict permissions otherwise you get this in the logs
+ # [warn] Fixing permissions on directory /var/lib/tor
+ chmod 700 /var/lib/tor
 
 # default port to used for incoming Tor connections
 # can be changed by changing 'ORPort' in torrc
